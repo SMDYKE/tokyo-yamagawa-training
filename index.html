@@ -86,7 +86,7 @@
         </div>
         
         <!-- モバイル用メニュー -->
-        <div id="mobile-menu" class="hidden md:hidden absolute top-0 left-0 w-full h-screen bg-white/95 backdrop-blur-sm pt-24">
+        <div id="mobile-menu" class="hidden md:hidden fixed top-0 left-0 w-full h-screen bg-white/95 backdrop-blur-sm pt-24">
             <nav class="flex flex-col items-center space-y-8">
                 <a href="#concept" class="text-custom-green text-lg hover:text-custom-accent transition-colors duration-300">私たちの想い</a>
                 <a href="#programs" class="text-custom-green text-lg hover:text-custom-accent transition-colors duration-300">研修プログラム</a>
@@ -337,7 +337,7 @@
                     貴社の課題やご要望に合わせた研修のカスタマイズも可能です。<br>
                     まずはお気軽に、お問い合わせください。
                 </p>
-                <a href="https://mt-tokyo.com/pages/contact-company" target="_blank" class="bg-custom-gold text-white font-medium py-4 px-12 rounded-lg text-lg hover:bg-custom-accent transition-all duration-300 transform hover:scale-105 shadow-lg">
+                <a href="https://mt-tokyo.com/pages/contact-company" target="_blank" class="bg-custom-gold text-custom-green font-medium py-4 px-12 rounded-lg text-lg hover:bg-custom-accent hover:text-white transition-all duration-300 transform hover:scale-105 shadow-lg">
                     お問い合わせフォーム
                 </a>
             </div>
@@ -366,22 +366,26 @@
         const menuLinks = mobileMenu.querySelectorAll('a');
 
         const toggleMenu = () => {
+            const isHidden = mobileMenu.classList.contains('hidden');
             mobileMenu.classList.toggle('hidden');
             openIcon.classList.toggle('hidden');
             closeIcon.classList.toggle('hidden');
             // スクロールを禁止/許可
-            document.body.style.overflow = mobileMenu.classList.contains('hidden') ? 'auto' : 'hidden';
+            document.body.style.overflow = isHidden ? 'hidden' : 'auto';
         };
 
         mobileMenuButton.addEventListener('click', toggleMenu);
         
         // メニュー内のリンクをクリックしたらメニューを閉じる
         menuLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                if (!mobileMenu.classList.contains('hidden')) {
-                    toggleMenu();
-                }
-            });
+            // target="_blank"のリンクはメニューを閉じないようにする
+            if (link.target !== '_blank') {
+                link.addEventListener('click', () => {
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        toggleMenu();
+                    }
+                });
+            }
         });
     </script>
 </body>
