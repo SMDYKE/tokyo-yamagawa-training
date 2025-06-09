@@ -101,13 +101,29 @@
             color: white;
             transform: scale(1.05);
         }
+        
+        /* スマホメニューのお問い合わせボタン専用CSS */
+        .mobile-contact-button {
+            display: inline-block;
+            background-color: #009eb8; /* custom-accent */
+            color: white !important; /* !importantで他のスタイルを上書き */
+            padding: 0.75rem 2rem; /* py-3 px-8 */
+            border-radius: 0.375rem; /* rounded-md */
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            transition: background-color 300ms;
+        }
+        .mobile-contact-button:hover {
+            background-color: #957f48; /* custom-gold */
+        }
     </style>
 </head>
 <body class="text-gray-800">
 
     <header class="bg-white/80 backdrop-blur-md sticky top-0 z-50 shadow-sm">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#" class="text-2xl font-medium text-custom-green tracking-wider">東京山側DMC</a>
+            <a href="#" class="block">
+                <img src="https://i.ibb.co/XkKDptH9/1-c.png" alt="東京山側DMC ロゴ" class="h-10 w-auto">
+            </a>
             
             <nav class="hidden md:flex items-center space-x-8">
                 <a href="#concept" class="text-custom-green hover:text-custom-accent transition-colors duration-300">私たちの想い</a>
@@ -135,7 +151,7 @@
                 <a href="#programs" class="text-custom-green text-lg hover:text-custom-accent transition-colors duration-300">研修プログラム</a>
                 <a href="#merits" class="text-custom-green text-lg hover:text-custom-accent transition-colors duration-300">提供価値</a>
                 <a href="#program1" class="text-custom-green text-lg hover:text-custom-accent transition-colors duration-300">プログラム詳細</a>
-                <a href="https://mt-tokyo.com/pages/contact-company" target="_blank" class="mt-4 inline-block bg-custom-accent text-white py-3 px-8 rounded-md hover:bg-custom-gold transition-colors duration-300 shadow">
+                <a href="https://mt-tokyo.com/pages/contact-company" target="_blank" class="mt-4 mobile-contact-button">
                     お問い合わせ
                 </a>
             </nav>
@@ -261,7 +277,7 @@
                              <img src="https://i.ibb.co/YF0KsYdX/LINE-ALBUM-20240318-250405-1.jpg" alt="アウトドア研修風景" class="rounded-md mb-6 w-full">
                         </div>
                         <div class="text-gray-700 leading-relaxed space-y-4">
-                            <h4 class="text-lg font-medium text-custom-green">当社ならではのポイント</h4>
+                            <h4 class="text-lg font-medium text-custom-green">当社ならではの差別化ポイント</h4>
                             <p class="text-sm">都心から近い美しい川 / プロの講師が現場運営 / 大人も子どもも楽しめる</p>
                             <h4 class="text-lg font-medium text-custom-green pt-4">この体験の価値</h4>
                             <ul class="list-disc list-inside text-sm space-y-1">
@@ -368,7 +384,7 @@
                              <img src="https://i.ibb.co/N2RMgmSr/240717-0903.jpg" alt="修験道文化研修風景" class="rounded-md mb-6 w-full">
                         </div>
                         <div class="text-gray-700 leading-relaxed space-y-4">
-                            <h4 class="text-lg font-medium text-custom-green">当社ならではのポイント</h4>
+                            <h4 class="text-lg font-medium text-custom-green">当社ならではの差別化ポイント</h4>
                              <ul class="list-disc list-inside text-sm space-y-1">
                                 <li>「修験道」という文化的・精神的資源を活用</li>
                                 <li>御岳山の信仰文化と自然や人の営みを融合させた唯一無二の体験</li>
