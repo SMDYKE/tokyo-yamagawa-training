@@ -5,10 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>東京山側DMC | 自然と地域を活かす企業研修</title>
     
-    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- Google Fonts: Zen Old Mincho -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@400;500;700;900&display=swap" rel="stylesheet">
@@ -17,7 +15,7 @@
         /* Zen Old Minchoフォントを全体に適用 */
         body {
             font-family: 'Zen Old Mincho', serif;
-            background-color: #fdfdfa; /* 全体の背景色を少し緑がかったオフホワイトに */
+            background-color: #fdfdfa;
             color: #333333;
         }
         
@@ -47,7 +45,7 @@
 
         /* 太字の見出しの文字間隔を調整 */
         h1, h2, h3, h4, h5, h6 {
-            font-weight: 500; /* 基本の太さを少し太めに設定 */
+            font-weight: 500;
         }
 
         .font-bold, .font-black {
@@ -59,9 +57,9 @@
             display: inline-block;
             background-color: #009eb8; /* custom-accent */
             color: white;
-            padding: 0.5rem 1.5rem; /* py-2 px-6 */
+            padding: 0.5rem 1.5rem;
             border-radius: 0.375rem; /* rounded-md */
-            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1); /* shadow */
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
             transition: background-color 300ms;
         }
         .contact-button:hover {
@@ -72,11 +70,11 @@
             display: inline-block;
             background-color: #009eb8; /* custom-accent */
             color: white;
-            padding: 1rem 3rem; /* py-4 px-12 */
+            padding: 1rem 3rem;
             border-radius: 0.5rem; /* rounded-lg */
             font-size: 1.125rem; /* text-lg */
             font-weight: 500; /* font-medium */
-            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1); /* shadow-lg */
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
             transition: all 300ms;
         }
         .contact-button-large:hover {
@@ -84,16 +82,33 @@
             transform: scale(1.05);
         }
         
+        /* ヒーローボタン専用のCSS */
+        .hero-button {
+            display: inline-block;
+            background-color: rgba(255, 255, 255, 0.6); /* 白の60%透過 */
+            color: #957f48; /* custom-gold */
+            border: 1px solid #957f48; /* 視認性向上のための枠線 */
+            backdrop-filter: blur(4px); /* 背景ぼかし効果 */
+            -webkit-backdrop-filter: blur(4px); /* Safari対応 */
+            padding: 0.75rem 2.5rem; /* py-3 px-10 */
+            border-radius: 0.5rem; /* rounded-lg */
+            font-size: 1.125rem; /* text-lg */
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+            transition: all 300ms;
+        }
+        .hero-button:hover {
+            background-color: #957f48; /* custom-gold */
+            color: white;
+            transform: scale(1.05);
+        }
     </style>
 </head>
 <body class="text-gray-800">
 
-    <!-- ヘッダー -->
     <header class="bg-white/80 backdrop-blur-md sticky top-0 z-50 shadow-sm">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
             <a href="#" class="text-2xl font-medium text-custom-green tracking-wider">東京山側DMC</a>
             
-            <!-- デスクトップ用メニュー -->
             <nav class="hidden md:flex items-center space-x-8">
                 <a href="#concept" class="text-custom-green hover:text-custom-accent transition-colors duration-300">私たちの想い</a>
                 <a href="#programs" class="text-custom-green hover:text-custom-accent transition-colors duration-300">研修プログラム</a>
@@ -104,7 +119,6 @@
                 お問い合わせ
             </a>
             
-            <!-- モバイル用メニューボタン -->
             <button id="mobile-menu-button" class="md:hidden text-custom-green z-50">
                 <svg id="menu-open-icon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
@@ -115,7 +129,6 @@
             </button>
         </div>
         
-        <!-- モバイル用メニュー -->
         <div id="mobile-menu" class="hidden md:hidden fixed top-0 left-0 w-full h-screen bg-white/95 backdrop-blur-sm pt-24">
             <nav class="flex flex-col items-center space-y-8">
                 <a href="#concept" class="text-custom-green text-lg hover:text-custom-accent transition-colors duration-300">私たちの想い</a>
@@ -130,7 +143,6 @@
     </header>
 
     <main>
-        <!-- ヒーローセクション -->
         <section class="relative h-[70vh] md:h-[80vh] bg-gray-400">
             <img src="https://i.ibb.co/gL0r3vLb/DMC.webp" 
                  alt="東京の山側の雄大な自然風景"
@@ -143,13 +155,12 @@
                 <p class="text-base md:text-2xl" style="text-shadow: 1px 1px 2px rgba(0,0,0,0.6);">
                     都心から1時間、東京の自然と文化を活かした企業研修で<br class="hidden sm:block">チームを新たな次元へ。
                 </p>
-                <a href="#programs" class="mt-8 bg-custom-gold text-white py-3 px-10 rounded-lg text-lg hover:bg-custom-accent transition-all duration-300 transform hover:scale-105 shadow-lg">
+                <a href="#program1" class="mt-8 hero-button">
                     研修プログラムを見る
                 </a>
             </div>
         </section>
 
-        <!-- コンセプトセクション -->
         <section id="concept" class="py-16 md:py-24 bg-white">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-12">
@@ -175,43 +186,8 @@
                 </div>
             </div>
         </section>
-
-        <!-- 研修プログラムセクション -->
-        <section id="programs" class="py-16 md:py-24 bg-custom-green/5">
-            <div class="container mx-auto px-6">
-                <div class="text-center mb-12">
-                    <h2 class="text-2xl md:text-4xl font-bold text-custom-green mb-4">3つの研修領域</h2>
-                    <p class="text-custom-gold text-lg tracking-widest">TRAINING PROGRAMS</p>
-                </div>
-                <p class="text-center max-w-3xl mx-auto mb-12 leading-relaxed">自然から得た学びを社会やビジネスの現場で活かし、新たな価値を創出する人材を育て、持続可能な未来づくりへとつなげます。</p>
-                <div class="grid md:grid-cols-3 gap-8">
-                    <!-- プログラムカード 1 -->
-                    <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col">
-                        <img src="https://i.ibb.co/YF0KsYdX/LINE-ALBUM-20240318-250405-1.jpg" alt="アウトドア研修のイメージ" class="rounded-md mb-6 aspect-video object-cover">
-                        <h3 class="text-xl font-medium text-custom-green mb-3">自然体験型アウトドア研修</h3>
-                        <p class="text-gray-600 leading-relaxed text-sm mb-4 flex-grow">自然環境下での協働活動を通じて、信頼関係やコミュニケーション力を高め、チームの結束を強化します。</p>
-                        <a href="#program1" class="mt-auto text-center bg-custom-green text-white py-2 px-6 rounded-md hover:bg-custom-accent transition-colors duration-300">詳細を見る</a>
-                    </div>
-                    <!-- プログラムカード 2 -->
-                    <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col">
-                        <img src="https://i.ibb.co/qMMGcQjm/LINE-ALBUM-250405-1.jpg" alt="アイデア創出研修のイメージ" class="rounded-md mb-6 aspect-video object-cover">
-                        <h3 class="text-xl font-medium text-custom-green mb-3">フィールドから学ぶアイデア創出研修</h3>
-                        <p class="text-gray-600 leading-relaxed text-sm mb-4 flex-grow">地域に眠る資源の本質を見極め、イノベーションの起点とする発想力を育成します。新規事業やプロジェクト創出にも活用可能です。</p>
-                        <a href="#program2" class="mt-auto text-center bg-custom-green text-white py-2 px-6 rounded-md hover:bg-custom-accent transition-colors duration-300">詳細を見る</a>
-                    </div>
-                    <!-- プログラムカード 3 -->
-                    <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col">
-                        <img src="https://i.ibb.co/N2RMgmSr/240717-0903.jpg" alt="修験道文化研修のイメージ" class="rounded-md mb-6 aspect-video object-cover">
-                        <h3 class="text-xl font-medium text-custom-green mb-3">修験道・御岳山 文化研修</h3>
-                        <p class="text-gray-600 leading-relaxed text-sm mb-4 flex-grow">御岳山を舞台に、自然と向き合い、心身を鍛える特別なフィールド研修です。山中歩行や瞑想、滝行などを体験し、自己変容を促します。</p>
-                        <a href="#program3" class="mt-auto text-center bg-custom-green text-white py-2 px-6 rounded-md hover:bg-custom-accent transition-colors duration-300">詳細を見る</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 提供価値セクション -->
-        <section id="merits" class="py-16 md:py-24 bg-white">
+        
+        <section id="merits" class="py-16 md:py-24 bg-custom-green/5">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-12">
                     <h2 class="text-2xl md:text-4xl font-bold text-custom-green mb-4">東京山側DMCが提供する価値</h2>
@@ -240,12 +216,43 @@
                         <p class="text-gray-600 leading-relaxed">国際基準の資格を有する、ビジネス経験豊富な講師</p>
                     </div>
                 </div>
+                <div class="mt-12 md:mt-16 text-center">
+                    <img src="https://i.ibb.co/pBJzdWht/2.png" alt="東京山側DMCの価値を示すイメージ" class="inline-block rounded-lg shadow-lg w-full max-w-4xl">
+                </div>
             </div>
         </section>
 
-        <!-- 各プログラム詳細セクション -->
+        <section id="programs" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-2xl md:text-4xl font-bold text-custom-green mb-4">3つの研修領域</h2>
+                    <p class="text-custom-gold text-lg tracking-widest">TRAINING PROGRAMS</p>
+                </div>
+                <p class="text-center max-w-3xl mx-auto mb-12 leading-relaxed">自然から得た学びを社会やビジネスの現場で活かし、新たな価値を創出する人材を育て、持続可能な未来づくりへとつなげます。</p>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col">
+                        <img src="https://i.ibb.co/YF0KsYdX/LINE-ALBUM-20240318-250405-1.jpg" alt="アウトドア研修のイメージ" class="rounded-md mb-6 aspect-video object-cover">
+                        <h3 class="text-xl font-medium text-custom-green mb-3">自然体験型アウトドア研修</h3>
+                        <p class="text-gray-600 leading-relaxed text-sm mb-4 flex-grow">自然環境下での協働活動を通じて、信頼関係やコミュニケーション力を高め、チームの結束を強化します。</p>
+                        <a href="#program1" class="mt-auto text-center bg-custom-green text-white py-2 px-6 rounded-md hover:bg-custom-accent transition-colors duration-300">詳細を見る</a>
+                    </div>
+                    <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col">
+                        <img src="https://i.ibb.co/qMMGcQjm/LINE-ALBUM-250405-1.jpg" alt="アイデア創出研修のイメージ" class="rounded-md mb-6 aspect-video object-cover">
+                        <h3 class="text-xl font-medium text-custom-green mb-3">フィールドから学ぶアイデア創出研修</h3>
+                        <p class="text-gray-600 leading-relaxed text-sm mb-4 flex-grow">地域に眠る資源の本質を見極め、イノベーションの起点とする発想力を育成します。新規事業やプロジェクト創出にも活用可能です。</p>
+                        <a href="#program2" class="mt-auto text-center bg-custom-green text-white py-2 px-6 rounded-md hover:bg-custom-accent transition-colors duration-300">詳細を見る</a>
+                    </div>
+                    <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col">
+                        <img src="https://i.ibb.co/N2RMgmSr/240717-0903.jpg" alt="修験道文化研修のイメージ" class="rounded-md mb-6 aspect-video object-cover">
+                        <h3 class="text-xl font-medium text-custom-green mb-3">修験道・御岳山 文化研修</h3>
+                        <p class="text-gray-600 leading-relaxed text-sm mb-4 flex-grow">御岳山を舞台に、自然と向き合い、心身を鍛える特別なフィールド研修です。山中歩行や瞑想、滝行などを体験し、自己変容を促します。</p>
+                        <a href="#program3" class="mt-auto text-center bg-custom-green text-white py-2 px-6 rounded-md hover:bg-custom-accent transition-colors duration-300">詳細を見る</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <div class="space-y-10 md:space-y-20 py-16 md:py-24 bg-custom-green/5">
-            <!-- プログラム1詳細 -->
             <section id="program1" class="container mx-auto px-6 scroll-mt-20">
                 <div class="bg-white p-8 md:p-12 rounded-lg shadow-lg">
                     <h3 class="text-2xl md:text-3xl font-bold text-custom-green mb-6">自然体験型アウトドア研修</h3>
@@ -303,7 +310,6 @@
                     </div>
                 </div>
             </section>
-            <!-- プログラム2詳細 -->
             <section id="program2" class="container mx-auto px-6 scroll-mt-20">
                  <div class="bg-white p-8 md:p-12 rounded-lg shadow-lg">
                     <h3 class="text-2xl md:text-3xl font-bold text-custom-green mb-6">フィールドから学ぶアイデア創出研修</h3>
@@ -354,7 +360,6 @@
                     </div>
                 </div>
             </section>
-            <!-- プログラム3詳細 -->
             <section id="program3" class="container mx-auto px-6 scroll-mt-20">
                  <div class="bg-white p-8 md:p-12 rounded-lg shadow-lg">
                     <h3 class="text-2xl md:text-3xl font-bold text-custom-green mb-6">修験道・御岳山 文化研修</h3>
@@ -403,7 +408,6 @@
             </section>
         </div>
         
-        <!-- 開催実績セクション -->
         <section id="achievements" class="py-16 md:py-24 bg-white">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-12">
@@ -435,7 +439,6 @@
             </div>
         </section>
 
-        <!-- お問い合わせ -->
         <section id="contact" class="py-20 bg-custom-green text-white">
             <div class="container mx-auto px-6 text-center">
                 <h2 class="text-2xl md:text-3xl font-bold mb-4 tracking-wider">お問い合わせ</h2>
@@ -451,7 +454,6 @@
 
     </main>
 
-    <!-- フッター -->
     <footer class="bg-[#2f3e3a] text-white py-8">
         <div class="container mx-auto px-6 text-center text-sm">
             <p class="font-medium text-lg mb-4 tracking-wider">株式会社東京山側DMC</p>
@@ -463,7 +465,6 @@
         </div>
     </footer>
 
-    <!-- モバイルメニュー用JavaScript -->
     <script>
         const mobileMenuButton = document.getElementById('mobile-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
