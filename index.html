@@ -62,37 +62,56 @@
     <header class="bg-white/80 backdrop-blur-md sticky top-0 z-50 shadow-sm">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
             <a href="#" class="text-2xl font-medium text-custom-green tracking-wider">東京山側DMC</a>
+            
+            <!-- デスクトップ用メニュー -->
             <nav class="hidden md:flex items-center space-x-8">
                 <a href="#concept" class="text-custom-green hover:text-custom-accent transition-colors duration-300">私たちの想い</a>
                 <a href="#programs" class="text-custom-green hover:text-custom-accent transition-colors duration-300">研修プログラム</a>
                 <a href="#merits" class="text-custom-green hover:text-custom-accent transition-colors duration-300">選ばれる理由</a>
-                <a href="#contact" class="text-custom-green hover:text-custom-accent transition-colors duration-300">お問い合わせ</a>
+                <a href="https://mt-tokyo.com/pages/contact-company" target="_blank" class="text-custom-green hover:text-custom-accent transition-colors duration-300">お問い合わせ</a>
             </nav>
-            <a href="#contact" class="hidden md:inline-block bg-custom-gold text-white py-2 px-6 rounded-md hover:bg-custom-accent transition-colors duration-300 shadow">
-                資料請求
+            <a href="https://mt-tokyo.com/pages/contact-company" target="_blank" class="hidden md:inline-block bg-custom-gold text-white py-2 px-6 rounded-md hover:bg-custom-accent transition-colors duration-300 shadow">
+                お問い合わせ
             </a>
-            <!-- モバイルメニューボタン（仮） -->
-            <button class="md:hidden text-custom-green">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            
+            <!-- モバイル用メニューボタン -->
+            <button id="mobile-menu-button" class="md:hidden text-custom-green z-50">
+                <svg id="menu-open-icon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
                 </svg>
+                <svg id="menu-close-icon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
             </button>
+        </div>
+        
+        <!-- モバイル用メニュー -->
+        <div id="mobile-menu" class="hidden md:hidden absolute top-0 left-0 w-full h-screen bg-white/95 backdrop-blur-sm pt-24">
+            <nav class="flex flex-col items-center space-y-8">
+                <a href="#concept" class="text-custom-green text-lg hover:text-custom-accent transition-colors duration-300">私たちの想い</a>
+                <a href="#programs" class="text-custom-green text-lg hover:text-custom-accent transition-colors duration-300">研修プログラム</a>
+                <a href="#merits" class="text-custom-green text-lg hover:text-custom-accent transition-colors duration-300">選ばれる理由</a>
+                <a href="https://mt-tokyo.com/pages/contact-company" target="_blank" class="text-custom-green text-lg hover:text-custom-accent transition-colors duration-300">お問い合わせ</a>
+                <a href="https://mt-tokyo.com/pages/contact-company" target="_blank" class="mt-4 inline-block bg-custom-gold text-white py-3 px-8 rounded-md hover:bg-custom-accent transition-colors duration-300 shadow">
+                    お問い合わせ
+                </a>
+            </nav>
         </div>
     </header>
 
     <main>
         <!-- ヒーローセクション -->
-        <section class="relative h-[60vh] md:h-[80vh] bg-gray-400">
+        <section class="relative h-[70vh] md:h-[80vh] bg-gray-400">
             <img src="https://i.ibb.co/gL0r3vLb/DMC.webp" 
                  alt="東京の山側の雄大な自然風景"
                  class="w-full h-full object-cover">
             <div class="absolute inset-0 bg-black/40"></div>
             <div class="absolute inset-0 flex flex-col justify-center items-center text-center text-white p-4">
-                <h1 class="text-4xl md:text-6xl font-black tracking-wider leading-tight mb-4" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.6);">
+                <h1 class="text-3xl sm:text-4xl md:text-6xl font-black tracking-wider leading-tight mb-4" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.6);">
                     日常から離れた<br>“本質との出会い”
                 </h1>
-                <p class="text-lg md:text-2xl" style="text-shadow: 1px 1px 2px rgba(0,0,0,0.6);">
-                    都心から1時間、東京の自然と文化を活かした企業研修で<br>チームを新たな次元へ。
+                <p class="text-base md:text-2xl" style="text-shadow: 1px 1px 2px rgba(0,0,0,0.6);">
+                    都心から1時間、東京の自然と文化を活かした企業研修で<br class="hidden sm:block">チームを新たな次元へ。
                 </p>
                 <a href="#programs" class="mt-8 bg-custom-gold text-white py-3 px-10 rounded-lg text-lg hover:bg-custom-accent transition-all duration-300 transform hover:scale-105 shadow-lg">
                     研修プログラムを見る
@@ -104,7 +123,7 @@
         <section id="concept" class="py-16 md:py-24 bg-white">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-12">
-                    <h2 class="text-3xl md:text-4xl font-bold text-custom-green mb-4">東京山側DMCの企業研修にかける想いと目的</h2>
+                    <h2 class="text-2xl md:text-4xl font-bold text-custom-green mb-4">東京山側DMCの企業研修にかける想いと目的</h2>
                     <p class="text-custom-gold text-lg tracking-widest">CONCEPT</p>
                 </div>
                 <div class="max-w-4xl mx-auto text-custom-green text-center leading-relaxed">
@@ -114,7 +133,7 @@
                             <h3 class="text-xl font-medium mb-3">日常から離れた<br>“本質との出会い”</h3>
                             <p class="text-sm text-left">東京の山側という豊かな自然と文化が残るフィールドで、都市の日常から一歩離れ、自分自身や社会の在り方に立ち返る体験を提供します。自然との対話を通じて、本質的な学びと気づきを促します。</p>
                         </div>
-                        <div class="p-6 md:border-l md:border-r border-gray-200">
+                        <div class="p-6 border-t border-b md:border-t-0 md:border-b-0 md:border-l md:border-r border-gray-200 my-4 md:my-0 py-8 md:py-6">
                             <h3 class="text-xl font-medium mb-3">「違いのわかるヒト」<br>を育てる</h3>
                             <p class="text-sm text-left">地質や風土の違いが生み出す日本文化の奥深さに触れ、その背景にある精神性や美意識を読み解く力。自然や伝統と深く向き合う体験を通して、表層ではない“真の違い”に気づける人材を育てます。</p>
                         </div>
@@ -131,7 +150,7 @@
         <section id="programs" class="py-16 md:py-24 bg-custom-green/5">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-12">
-                    <h2 class="text-3xl md:text-4xl font-bold text-custom-green mb-4">3つの研修領域</h2>
+                    <h2 class="text-2xl md:text-4xl font-bold text-custom-green mb-4">3つの研修領域</h2>
                     <p class="text-custom-gold text-lg tracking-widest">TRAINING PROGRAMS</p>
                 </div>
                 <p class="text-center max-w-3xl mx-auto mb-12 leading-relaxed">自然から得た学びを社会やビジネスの現場で活かし、新たな価値を創出する人材を育て、持続可能な未来づくりへとつなげます。</p>
@@ -165,7 +184,7 @@
         <section id="merits" class="py-16 md:py-24 bg-white">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-12">
-                    <h2 class="text-3xl md:text-4xl font-bold text-custom-green mb-4">東京山側DMCの企業研修を受けるメリット</h2>
+                    <h2 class="text-2xl md:text-4xl font-bold text-custom-green mb-4">東京山側DMCの企業研修を受けるメリット</h2>
                     <p class="text-custom-gold text-lg tracking-widest">OUR MERITS</p>
                 </div>
                 <div class="max-w-5xl mx-auto grid md:grid-cols-3 gap-10">
@@ -310,17 +329,16 @@
             </section>
         </div>
 
-
         <!-- お問い合わせ -->
         <section id="contact" class="py-20 bg-custom-green text-white">
             <div class="container mx-auto px-6 text-center">
-                <h2 class="text-3xl font-bold mb-4 tracking-wider">お問い合わせ・資料請求</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 tracking-wider">お問い合わせ</h2>
                 <p class="mb-8 max-w-2xl mx-auto">
                     貴社の課題やご要望に合わせた研修のカスタマイズも可能です。<br>
-                    まずはお気軽に、資料請求またはお問い合わせください。
+                    まずはお気軽に、お問い合わせください。
                 </p>
-                <a href="#" class="bg-custom-gold text-white font-medium py-4 px-12 rounded-lg text-lg hover:bg-custom-accent transition-all duration-300 transform hover:scale-105 shadow-lg">
-                    フォームはこちら
+                <a href="https://mt-tokyo.com/pages/contact-company" target="_blank" class="bg-custom-gold text-white font-medium py-4 px-12 rounded-lg text-lg hover:bg-custom-accent transition-all duration-300 transform hover:scale-105 shadow-lg">
+                    お問い合わせフォーム
                 </a>
             </div>
         </section>
@@ -332,12 +350,39 @@
         <div class="container mx-auto px-6 text-center text-sm">
             <p class="font-medium text-lg mb-4 tracking-wider">株式会社東京山側DMC</p>
             <div class="flex justify-center space-x-6 mb-4">
-                <a href="#" class="hover:text-custom-accent transition-colors">会社概要</a>
-                <a href="#" class="hover:text-custom-accent transition-colors">プライバシーポリシー</a>
+                <a href="https://mt-tokyo.com/pages/tokyo-yamagawa" target="_blank" class="hover:text-custom-accent transition-colors">会社概要</a>
+                <a href="https://mt-tokyo.com/pages/contact-company" target="_blank" class="hover:text-custom-accent transition-colors">お問い合わせ</a>
             </div>
             <p>&copy; 2024 Tokyo Yamagawa DMC Inc. All Rights Reserved.</p>
         </div>
     </footer>
 
+    <!-- モバイルメニュー用JavaScript -->
+    <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const openIcon = document.getElementById('menu-open-icon');
+        const closeIcon = document.getElementById('menu-close-icon');
+        const menuLinks = mobileMenu.querySelectorAll('a');
+
+        const toggleMenu = () => {
+            mobileMenu.classList.toggle('hidden');
+            openIcon.classList.toggle('hidden');
+            closeIcon.classList.toggle('hidden');
+            // スクロールを禁止/許可
+            document.body.style.overflow = mobileMenu.classList.contains('hidden') ? 'auto' : 'hidden';
+        };
+
+        mobileMenuButton.addEventListener('click', toggleMenu);
+        
+        // メニュー内のリンクをクリックしたらメニューを閉じる
+        menuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (!mobileMenu.classList.contains('hidden')) {
+                    toggleMenu();
+                }
+            });
+        });
+    </script>
 </body>
 </html>
