@@ -53,6 +53,36 @@
         .font-bold, .font-black {
            letter-spacing: 0.05em;
         }
+
+        /* --- ボタン専用のカスタムCSS --- */
+        .contact-button {
+            display: inline-block;
+            background-color: #009eb8; /* custom-accent */
+            color: white;
+            padding: 0.5rem 1.5rem; /* py-2 px-6 */
+            border-radius: 0.375rem; /* rounded-md */
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1); /* shadow */
+            transition: background-color 300ms;
+        }
+        .contact-button:hover {
+            background-color: #957f48; /* custom-gold */
+        }
+
+        .contact-button-large {
+            display: inline-block;
+            background-color: #009eb8; /* custom-accent */
+            color: white;
+            padding: 1rem 3rem; /* py-4 px-12 */
+            border-radius: 0.5rem; /* rounded-lg */
+            font-size: 1.125rem; /* text-lg */
+            font-weight: 500; /* font-medium */
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1); /* shadow-lg */
+            transition: all 300ms;
+        }
+        .contact-button-large:hover {
+            background-color: #957f48; /* custom-gold */
+            transform: scale(1.05);
+        }
         
     </style>
 </head>
@@ -67,10 +97,10 @@
             <nav class="hidden md:flex items-center space-x-8">
                 <a href="#concept" class="text-custom-green hover:text-custom-accent transition-colors duration-300">私たちの想い</a>
                 <a href="#programs" class="text-custom-green hover:text-custom-accent transition-colors duration-300">研修プログラム</a>
-                <a href="#merits" class="text-custom-green hover:text-custom-accent transition-colors duration-300">選ばれる理由</a>
-                <a href="https://mt-tokyo.com/pages/contact-company" target="_blank" class="text-custom-green hover:text-custom-accent transition-colors duration-300">お問い合わせ</a>
+                <a href="#merits" class="text-custom-green hover:text-custom-accent transition-colors duration-300">提供価値</a>
+                <a href="#program1" class="text-custom-green hover:text-custom-accent transition-colors duration-300">プログラム詳細</a>
             </nav>
-            <a href="https://mt-tokyo.com/pages/contact-company" target="_blank" class="hidden md:inline-block bg-custom-gold text-white py-2 px-6 rounded-md hover:bg-custom-accent transition-colors duration-300 shadow">
+            <a href="https://mt-tokyo.com/pages/contact-company" target="_blank" class="hidden md:inline-block contact-button">
                 お問い合わせ
             </a>
             
@@ -90,9 +120,9 @@
             <nav class="flex flex-col items-center space-y-8">
                 <a href="#concept" class="text-custom-green text-lg hover:text-custom-accent transition-colors duration-300">私たちの想い</a>
                 <a href="#programs" class="text-custom-green text-lg hover:text-custom-accent transition-colors duration-300">研修プログラム</a>
-                <a href="#merits" class="text-custom-green text-lg hover:text-custom-accent transition-colors duration-300">選ばれる理由</a>
-                <a href="https://mt-tokyo.com/pages/contact-company" target="_blank" class="text-custom-green text-lg hover:text-custom-accent transition-colors duration-300">お問い合わせ</a>
-                <a href="https://mt-tokyo.com/pages/contact-company" target="_blank" class="mt-4 inline-block bg-custom-gold text-white py-3 px-8 rounded-md hover:bg-custom-accent transition-colors duration-300 shadow">
+                <a href="#merits" class="text-custom-green text-lg hover:text-custom-accent transition-colors duration-300">提供価値</a>
+                <a href="#program1" class="text-custom-green text-lg hover:text-custom-accent transition-colors duration-300">プログラム詳細</a>
+                <a href="https://mt-tokyo.com/pages/contact-company" target="_blank" class="mt-4 inline-block bg-custom-accent text-white py-3 px-8 rounded-md hover:bg-custom-gold transition-colors duration-300 shadow">
                     お問い合わせ
                 </a>
             </nav>
@@ -180,12 +210,12 @@
             </div>
         </section>
 
-        <!-- 選ばれる理由（メリット）セクション -->
+        <!-- 提供価値セクション -->
         <section id="merits" class="py-16 md:py-24 bg-white">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-12">
-                    <h2 class="text-2xl md:text-4xl font-bold text-custom-green mb-4">東京山側DMCの企業研修を受けるメリット</h2>
-                    <p class="text-custom-gold text-lg tracking-widest">OUR MERITS</p>
+                    <h2 class="text-2xl md:text-4xl font-bold text-custom-green mb-4">東京山側DMCが提供する価値</h2>
+                    <p class="text-custom-gold text-lg tracking-widest">UNIQUE VALUE</p>
                 </div>
                 <div class="max-w-5xl mx-auto grid md:grid-cols-3 gap-10">
                     <div class="text-center">
@@ -234,7 +264,7 @@
                             </ul>
                         </div>
                     </div>
-                     <div class="mt-8 border-t border-gray-200 pt-8 grid md:grid-cols-2 gap-8">
+                    <div class="mt-8 border-t border-gray-200 pt-8 grid md:grid-cols-2 gap-8">
                         <div>
                             <h4 class="text-xl font-medium text-custom-green mb-4">主な内容</h4>
                              <dl class="space-y-3 text-sm">
@@ -256,6 +286,21 @@
                            <p class="text-sm mb-4"><strong>持ち物:</strong> 汚れてもよい動きやすい服装、水着・着替え(任意)、運動靴、帽子、軍手、レインコート、タオル、飲み物、ライフジャケット、マリンシューズまたはかかとのあるサンダル (ビーチサンダル不可)、健康保険証</p>
                         </div>
                     </div>
+                    <div class="mt-8 border-t border-gray-200 pt-8">
+                        <h4 class="text-xl font-medium text-custom-green mb-6">講師</h4>
+                        <div class="md:flex items-start gap-8">
+                            <img src="https://i.ibb.co/20Cqt4WW/DMC-01.png" alt="講師：師岡 龍也" class="w-36 h-36 rounded-full object-cover mx-auto md:mx-0 mb-4 md:mb-0 flex-shrink-0">
+                            <div>
+                                <h5 class="text-lg font-medium text-custom-green">師岡 龍也</h5>
+                                <p class="text-sm text-gray-600 mt-2 leading-relaxed">あきる野市出身。あきる野市の猟友会会⻑の祖父から影響を受け、幼いころから自然環境に対して興味を持つ。探求型自然体験学習の講師陣のリーダーとして、年間2万人の事業へと成⻑させた。空手、サーフィン、釣りといった多種多様なアクティビティで大会優勝の実績を持ち、スキルとリーダーシップを活かした指導は高い評価を受けている。</p>
+                                <p class="text-sm text-gray-600 mt-4 leading-relaxed whitespace-pre-line"><strong>【資格】</strong>
+・WEA(COL)アウトドアリーダー
+・Leave No Trace Level2 Instructor
+・Wilderness First Aid 
+・日本山岳ガイド協会認定 自然ガイドステージI</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
             <!-- プログラム2詳細 -->
@@ -275,7 +320,7 @@
                             </ul>
                         </div>
                     </div>
-                     <div class="mt-8 border-t border-gray-200 pt-8 grid md:grid-cols-2 gap-8">
+                    <div class="mt-8 border-t border-gray-200 pt-8 grid md:grid-cols-2 gap-8">
                         <div>
                             <h4 class="text-xl font-medium text-custom-green mb-4">主な内容</h4>
                              <p class="text-sm text-gray-600 leading-relaxed">「あたりまえを疑う」ワークショップから始まり、実際のフィールドワーク（地域課題 or 生物生存戦略）を通じて、本質的な課題を発見します。固定観念を外し、「良い問い」を立て、ユニークなアイデアを創出するプロセスを体系的に学びます。</p>
@@ -286,6 +331,25 @@
                            <p class="text-sm mb-4"><strong>時間:</strong> 1日研修 (10:00〜20:00 懇親会含)</p>
                            <p class="text-sm mb-4"><strong>場所:</strong> 東京山側エリア (あきる野市、青梅市、八王子市など応相談)</p>
                            <p class="text-sm mb-4"><strong>持ち物:</strong> 動きやすい服装・靴、筆記用具、雨具など</p>
+                        </div>
+                    </div>
+                    <div class="mt-8 border-t border-gray-200 pt-8">
+                        <h4 class="text-xl font-medium text-custom-green mb-6">講師</h4>
+                        <div class="space-y-10">
+                            <div class="md:flex items-start gap-8">
+                                <img src="https://i.ibb.co/5xYFWGZZ/DMC-02.jpg" alt="講師：櫻澤 裕樹" class="w-36 h-36 rounded-full object-cover mx-auto md:mx-0 mb-4 md:mb-0 flex-shrink-0">
+                                <div>
+                                    <h5 class="text-lg font-medium text-custom-green">櫻澤 裕樹</h5>
+                                    <p class="text-sm text-gray-600 mt-2 leading-relaxed">探究型自然体験学習スクール校長。環境省で生物多様性や自然再生に関する企画・調整業務に携わった後、地元・東京都あきる野市に拠点を移す。現在は「みちくさの達人」として、環境教育系メディアへの出演・監修も行い、子どもたちが楽しく自然の多様性を学べる探究型自然学習プログラムを提供している。</p>
+                                </div>
+                            </div>
+                            <div class="md:flex items-start gap-8">
+                                <img src="https://i.ibb.co/n8KVtGMs/DMC.jpg" alt="講師：足立 恭平" class="w-36 h-36 rounded-full object-cover mx-auto md:mx-0 mb-4 md:mb-0 flex-shrink-0">
+                                <div>
+                                    <h5 class="text-lg font-medium text-custom-green">足立 恭平</h5>
+                                    <p class="text-sm text-gray-600 mt-2 leading-relaxed">株式会社東京山側デジタル推進機構代表取締役。コンサル業界で新規事業立ち上げや大規模プロジェクトに携わった後、独立。多様な業界での経験を活かし、東京都あきる野市に移住。地域のデジタル化を進めるべく「東京山側デジタル推進機構」を設立し、企業のDX支援や人材育成プログラムの運営に取り組んでいる。</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -312,7 +376,7 @@
                             </ul>
                         </div>
                     </div>
-                     <div class="mt-8 border-t border-gray-200 pt-8 grid md:grid-cols-2 gap-8">
+                    <div class="mt-8 border-t border-gray-200 pt-8 grid md:grid-cols-2 gap-8">
                         <div>
                             <h4 class="text-xl font-medium text-custom-green mb-4">主な内容</h4>
                              <p class="text-sm text-gray-600 leading-relaxed">修験道アイテムを用いて御岳山を歩き、瞑想体験を行います。また、滝行などの身体性の高い修行体験を通じて、禊を行い心身をリセットすることで、自身の思考・感情・身体の変化に気づきを得ます。</p>
@@ -325,9 +389,51 @@
                            <p class="text-sm mb-4"><strong>持ち物:</strong> 歩きやすい服装と靴(登山靴推奨)、着替え(滝行用)、バスタオル、雨具、水筒、筆記用具、健康保険証</p>
                         </div>
                     </div>
-                </div>
+                    <div class="mt-8 border-t border-gray-200 pt-8">
+                        <h4 class="text-xl font-medium text-custom-green mb-6">講師</h4>
+                        <div class="md:flex items-start gap-8">
+                            <img src="https://i.ibb.co/Z1YM1h3q/DMC-3.jpg" alt="講師：西川 佳克" class="w-36 h-36 rounded-full object-cover mx-auto md:mx-0 mb-4 md:mb-0 flex-shrink-0">
+                            <div>
+                                <h5 class="text-lg font-medium text-custom-green">西川 佳克</h5>
+                                <p class="text-sm text-gray-600 mt-2 leading-relaxed">株式会社東京山側DMC COO。大学卒業後、真言宗僧侶として活動(当山派修験道修了)。東京山側では、農業を通じた探究型自然体験学習スクールの提供や、官公庁の助成金・補助金関連業務を担当。信条は利他100%の素直な心。目標は、身体、心、食、経済、地域社会に貢献するウェルビーイングの実現。</p>
+                            </div>
+                        </div>
+                    </div>
+                 </div>
             </section>
         </div>
+        
+        <!-- 開催実績セクション -->
+        <section id="achievements" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-2xl md:text-4xl font-bold text-custom-green mb-4">開催実績</h2>
+                    <p class="text-custom-gold text-lg tracking-widest">ACHIEVEMENTS</p>
+                </div>
+                <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-8">
+                    <div class="bg-custom-green/5 p-8 rounded-lg">
+                        <h3 class="text-xl font-medium text-custom-green mb-2">ワーケーションツアー</h3>
+                        <p class="text-custom-gold mb-4 text-sm">地域課題解決型研修</p>
+                        <p class="text-sm text-gray-600 leading-relaxed">東京多摩・島しょ地域でのワーケーション体験ツアーを実施。日本を代表する大手企業3社・計11名を招き、地域課題に関するフィールドワークと、課題解決に向けたアイデア創出ワークショップを開催しました。地域社会と企業が協働し、実践的な学びを得る機会となりました。</p>
+                    </div>
+                    <div class="bg-custom-green/5 p-8 rounded-lg">
+                        <h3 class="text-xl font-medium text-custom-green mb-2">リトリートツアー</h3>
+                        <p class="text-custom-gold mb-4 text-sm">自然と経営の調和を育む時間</p>
+                        <p class="text-sm text-gray-600 leading-relaxed">企業経営者や大手企業管理職を対象に、東京山側の自然環境と地域資源を活かしたリトリートツアーを展開。魚釣りやキャンプなどのアクティビティに加え、私たちの地域活性化への想いを共有することで、学びと癒しが共存するプログラムを提供しています。</p>
+                    </div>
+                    <div class="bg-custom-green/5 p-8 rounded-lg">
+                        <h3 class="text-xl font-medium text-custom-green mb-2">環境・野外指導プログラム</h3>
+                        <p class="text-custom-gold mb-4 text-sm">SDGs・アドベンチャートラベル時代の人材育成</p>
+                        <p class="text-sm text-gray-600 leading-relaxed">SDGsやアドベンチャートラベルへの関心の高まりとともに、自然環境への理解や野外活動の質が問われる時代となっています。私たちは、国際基準の有資格者(Leave No Traceインストラクター/Wilderness Education Association Japan公認指導者)を複数擁し、ガイド組合や地域団体を対象に、環境倫理や野外リーダーシップを育む指導・研修を行っています。</p>
+                    </div>
+                    <div class="bg-custom-green/5 p-8 rounded-lg">
+                        <h3 class="text-xl font-medium text-custom-green mb-2">TAMA INNOVATION PROGRAM</h3>
+                        <p class="text-custom-gold mb-4 text-sm">地域課題を“学び”と“実践”で解決する</p>
+                        <p class="text-sm text-gray-600 leading-relaxed">「地域課題をビジネスで解決する力を身につけたい方」を対象にした、実践型のイノベーション人材育成講座です。慶應義塾大学大学院システムデザイン・マネジメント研究科 白坂研究室との共催により、イノベーション創出に有効な「システム×デザイン思考」を基礎から応用まで学びます。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <!-- お問い合わせ -->
         <section id="contact" class="py-20 bg-custom-green text-white">
@@ -337,7 +443,7 @@
                     貴社の課題やご要望に合わせた研修のカスタマイズも可能です。<br>
                     まずはお気軽に、お問い合わせください。
                 </p>
-                <a href="https://mt-tokyo.com/pages/contact-company" target="_blank" class="bg-custom-gold text-custom-green font-medium py-4 px-12 rounded-lg text-lg hover:bg-custom-accent hover:text-white transition-all duration-300 transform hover:scale-105 shadow-lg">
+                <a href="https://mt-tokyo.com/pages/contact-company" target="_blank" class="contact-button-large">
                     お問い合わせフォーム
                 </a>
             </div>
