@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>東京山側DMC | 自然と地域を活かす企業研修</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Zen Old Mincho -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@400;500;700;900&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Zen Old Minchoフォントを全体に適用 */
+        body {
+            font-family: 'Zen Old Mincho', serif;
+            background-color: #fdfdfa; /* 全体の背景色を少し緑がかったオフホワイトに */
+            color: #333333;
+        }
+        
+        /* カスタムカラーをTailwindで使えるように設定 */
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'custom-gold': '#957f48',
+                        'custom-green': '#255941',
+                        'custom-accent': '#009eb8',
+                    },
+                    fontWeight: {
+                        'normal': 400,
+                        'medium': 500,
+                        'bold': 700,
+                        'black': 900,
+                    }
+                }
+            }
+        }
+
+        /* スムーズスクロール */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* 太字の見出しの文字間隔を調整 */
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: 500; /* 基本の太さを少し太めに設定 */
+        }
+
+        .font-bold, .font-black {
+           letter-spacing: 0.05em;
+        }
+        
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- ヘッダー -->
+    <header class="bg-white/80 backdrop-blur-md sticky top-0 z-50 shadow-sm">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-medium text-custom-green tracking-wider">東京山側DMC</a>
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="#concept" class="text-custom-green hover:text-custom-accent transition-colors duration-300">私たちの想い</a>
+                <a href="#programs" class="text-custom-green hover:text-custom-accent transition-colors duration-300">研修プログラム</a>
+                <a href="#merits" class="text-custom-green hover:text-custom-accent transition-colors duration-300">選ばれる理由</a>
+                <a href="#contact" class="text-custom-green hover:text-custom-accent transition-colors duration-300">お問い合わせ</a>
+            </nav>
+            <a href="#contact" class="hidden md:inline-block bg-custom-gold text-white py-2 px-6 rounded-md hover:bg-custom-accent transition-colors duration-300 shadow">
+                資料請求
+            </a>
+            <!-- モバイルメニューボタン（仮） -->
+            <button class="md:hidden text-custom-green">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- ヒーローセクション -->
+        <section class="relative h-[60vh] md:h-[80vh] bg-gray-400">
+            <img src="https://i.ibb.co/gL0r3vLb/DMC.webp" 
+                 alt="東京の山側の雄大な自然風景"
+                 class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-black/40"></div>
+            <div class="absolute inset-0 flex flex-col justify-center items-center text-center text-white p-4">
+                <h1 class="text-4xl md:text-6xl font-black tracking-wider leading-tight mb-4" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.6);">
+                    日常から離れた<br>“本質との出会い”
+                </h1>
+                <p class="text-lg md:text-2xl" style="text-shadow: 1px 1px 2px rgba(0,0,0,0.6);">
+                    都心から1時間、東京の自然と文化を活かした企業研修で<br>チームを新たな次元へ。
+                </p>
+                <a href="#programs" class="mt-8 bg-custom-gold text-white py-3 px-10 rounded-lg text-lg hover:bg-custom-accent transition-all duration-300 transform hover:scale-105 shadow-lg">
+                    研修プログラムを見る
+                </a>
+            </div>
+        </section>
+
+        <!-- コンセプトセクション -->
+        <section id="concept" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-custom-green mb-4">東京山側DMCの企業研修にかける想いと目的</h2>
+                    <p class="text-custom-gold text-lg tracking-widest">CONCEPT</p>
+                </div>
+                <div class="max-w-4xl mx-auto text-custom-green text-center leading-relaxed">
+                    <p class="mb-10">自然体験学習やアドベンチャートラベル事業での実績をもとに、企業向け研修事業を展開。東京の山側という希少なフィールドを活かし、自然との共生や学びの感動を、企業の人材育成に活かします。</p>
+                    <div class="grid md:grid-cols-3 gap-8">
+                        <div class="p-6">
+                            <h3 class="text-xl font-medium mb-3">日常から離れた<br>“本質との出会い”</h3>
+                            <p class="text-sm text-left">東京の山側という豊かな自然と文化が残るフィールドで、都市の日常から一歩離れ、自分自身や社会の在り方に立ち返る体験を提供します。自然との対話を通じて、本質的な学びと気づきを促します。</p>
+                        </div>
+                        <div class="p-6 md:border-l md:border-r border-gray-200">
+                            <h3 class="text-xl font-medium mb-3">「違いのわかるヒト」<br>を育てる</h3>
+                            <p class="text-sm text-left">地質や風土の違いが生み出す日本文化の奥深さに触れ、その背景にある精神性や美意識を読み解く力。自然や伝統と深く向き合う体験を通して、表層ではない“真の違い”に気づける人材を育てます。</p>
+                        </div>
+                        <div class="p-6">
+                             <h3 class="text-xl font-medium mb-3">体験が、<br>価値を変える</h3>
+                            <p class="text-sm text-left">現地での五感を通じた一次情報の体験は、机上の知識を超える深い学びをもたらします。この体験により、地域文化や伝統芸能への深い理解と敬意が育まれ、持続的に文化を支える循環の一端を担うことになります。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 研修プログラムセクション -->
+        <section id="programs" class="py-16 md:py-24 bg-custom-green/5">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-custom-green mb-4">3つの研修領域</h2>
+                    <p class="text-custom-gold text-lg tracking-widest">TRAINING PROGRAMS</p>
+                </div>
+                <p class="text-center max-w-3xl mx-auto mb-12 leading-relaxed">自然から得た学びを社会やビジネスの現場で活かし、新たな価値を創出する人材を育て、持続可能な未来づくりへとつなげます。</p>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- プログラムカード 1 -->
+                    <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col">
+                        <img src="https://i.ibb.co/YF0KsYdX/LINE-ALBUM-20240318-250405-1.jpg" alt="アウトドア研修のイメージ" class="rounded-md mb-6 aspect-video object-cover">
+                        <h3 class="text-xl font-medium text-custom-green mb-3">自然体験型アウトドア研修</h3>
+                        <p class="text-gray-600 leading-relaxed text-sm mb-4 flex-grow">自然環境下での協働活動を通じて、信頼関係やコミュニケーション力を高め、チームの結束を強化します。</p>
+                        <a href="#program1" class="mt-auto text-center bg-custom-green text-white py-2 px-6 rounded-md hover:bg-custom-accent transition-colors duration-300">詳細を見る</a>
+                    </div>
+                    <!-- プログラムカード 2 -->
+                    <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col">
+                        <img src="https://i.ibb.co/qMMGcQjm/LINE-ALBUM-250405-1.jpg" alt="アイデア創出研修のイメージ" class="rounded-md mb-6 aspect-video object-cover">
+                        <h3 class="text-xl font-medium text-custom-green mb-3">フィールドから学ぶアイデア創出研修</h3>
+                        <p class="text-gray-600 leading-relaxed text-sm mb-4 flex-grow">地域に眠る資源の本質を見極め、イノベーションの起点とする発想力を育成します。新規事業やプロジェクト創出にも活用可能です。</p>
+                        <a href="#program2" class="mt-auto text-center bg-custom-green text-white py-2 px-6 rounded-md hover:bg-custom-accent transition-colors duration-300">詳細を見る</a>
+                    </div>
+                    <!-- プログラムカード 3 -->
+                    <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col">
+                        <img src="https://i.ibb.co/N2RMgmSr/240717-0903.jpg" alt="修験道文化研修のイメージ" class="rounded-md mb-6 aspect-video object-cover">
+                        <h3 class="text-xl font-medium text-custom-green mb-3">修験道・御岳山 文化研修</h3>
+                        <p class="text-gray-600 leading-relaxed text-sm mb-4 flex-grow">御岳山を舞台に、自然と向き合い、心身を鍛える特別なフィールド研修です。山中歩行や瞑想、滝行などを体験し、自己変容を促します。</p>
+                        <a href="#program3" class="mt-auto text-center bg-custom-green text-white py-2 px-6 rounded-md hover:bg-custom-accent transition-colors duration-300">詳細を見る</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 選ばれる理由（メリット）セクション -->
+        <section id="merits" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-custom-green mb-4">東京山側DMCの企業研修を受けるメリット</h2>
+                    <p class="text-custom-gold text-lg tracking-widest">OUR MERITS</p>
+                </div>
+                <div class="max-w-5xl mx-auto grid md:grid-cols-3 gap-10">
+                    <div class="text-center">
+                        <div class="flex justify-center mb-4">
+                            <div class="bg-custom-gold/10 p-5 rounded-full"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#957f48" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-map-pin"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></div>
+                        </div>
+                        <h3 class="text-2xl font-medium text-custom-green mb-2">立地</h3>
+                        <p class="text-gray-600 leading-relaxed">都心から1時間という好立地</p>
+                    </div>
+                    <div class="text-center">
+                         <div class="flex justify-center mb-4">
+                            <div class="bg-custom-gold/10 p-5 rounded-full"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#957f48" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-mountain"><path d="M12 3L2 19h20L12 3z"></path><path d="M8.5 12.5L11 15l3-2.5"></path></svg></div>
+                        </div>
+                        <h3 class="text-2xl font-medium text-custom-green mb-2">フィールド</h3>
+                        <p class="text-gray-600 leading-relaxed">秩父多摩甲斐国立公園、ジオ特性、それを基盤とした文化、動植物</p>
+                    </div>
+                    <div class="text-center">
+                         <div class="flex justify-center mb-4">
+                            <div class="bg-custom-gold/10 p-5 rounded-full"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#957f48" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg></div>
+                        </div>
+                        <h3 class="text-2xl font-medium text-custom-green mb-2">講師陣</h3>
+                        <p class="text-gray-600 leading-relaxed">国際基準の資格を有する、ビジネス経験豊富な講師</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 各プログラム詳細セクション -->
+        <div class="space-y-10 md:space-y-20 py-16 md:py-24 bg-custom-green/5">
+            <!-- プログラム1詳細 -->
+            <section id="program1" class="container mx-auto px-6 scroll-mt-20">
+                <div class="bg-white p-8 md:p-12 rounded-lg shadow-lg">
+                    <h3 class="text-2xl md:text-3xl font-bold text-custom-green mb-6">自然体験型アウトドア研修</h3>
+                    <div class="md:grid md:grid-cols-3 gap-8">
+                        <div class="md:col-span-2">
+                             <img src="https://i.ibb.co/YF0KsYdX/LINE-ALBUM-20240318-250405-1.jpg" alt="アウトドア研修風景" class="rounded-md mb-6 w-full">
+                        </div>
+                        <div class="text-gray-700 leading-relaxed space-y-4">
+                            <h4 class="text-lg font-medium text-custom-green">当社ならではの差別化ポイント</h4>
+                            <p class="text-sm">都心から近い美しい川 / プロの講師が現場運営 / 大人も子どもも楽しめる</p>
+                            <h4 class="text-lg font-medium text-custom-green pt-4">この体験の価値</h4>
+                            <ul class="list-disc list-inside text-sm space-y-1">
+                                <li>秋川渓谷に生息している、多くのいきものを観察できる</li>
+                                <li>膝下の浅い川に入り、自然の餌を使った伝統漁法での魚釣りが体験できる</li>
+                                <li>焚き火や薪集めを通じて、日常では得られない知識や気づきを得られる</li>
+                            </ul>
+                        </div>
+                    </div>
+                     <div class="mt-8 border-t border-gray-200 pt-8 grid md:grid-cols-2 gap-8">
+                        <div>
+                            <h4 class="text-xl font-medium text-custom-green mb-4">主な内容</h4>
+                             <dl class="space-y-3 text-sm">
+                                <dt class="font-medium text-custom-green">焚き火の仕方・薪探し</dt>
+                                <dd class="pl-4 text-gray-600">Leave No Traceに基づいた安全な焚き火の技術を学ぶ。薪の探し方や火起こしのテクニックも体験し、自然の中で安全に火を扱う方法を学ぶ。</dd>
+                                <dt class="font-medium text-custom-green">バーベキュー</dt>
+                                <dd class="pl-4 text-gray-600">釣った魚や地元の食材を使って、焚き火や炭で調理する。BBQ上には屋根があるため、急な天候変化にも対応可能。</dd>
+                                <dt class="font-medium text-custom-green">魚釣り (伝統漁法)</dt>
+                                <dd class="pl-4 text-gray-600">浅い川に入り、自分で餌を探し、竹竿を使って魚を釣る体験。子どもでも比較的魚が釣れるため、大人も子どもも大盛り上がり。</dd>
+                                <dt class="font-medium text-custom-green">いきもの探し</dt>
+                                <dd class="pl-4 text-gray-600">秋川渓谷に生息する多様ないきものを観察し、講師による解説を通じて自然への理解を深める。</dd>
+                            </dl>
+                        </div>
+                        <div>
+                           <h4 class="text-xl font-medium text-custom-green mb-4">実施概要</h4>
+                           <p class="text-sm mb-4"><strong>参加費:</strong> 1名あたり 15,000円(税込)</p>
+                           <p class="text-sm mb-4"><strong>時間:</strong> 1日研修 (10:00~15:00)</p>
+                           <p class="text-sm mb-4"><strong>場所:</strong> 自然人村(山渓)</p>
+                           <p class="text-sm mb-4"><strong>持ち物:</strong> 汚れてもよい動きやすい服装、水着・着替え(任意)、運動靴、帽子、軍手、レインコート、タオル、飲み物、ライフジャケット、マリンシューズまたはかかとのあるサンダル (ビーチサンダル不可)、健康保険証</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- プログラム2詳細 -->
+            <section id="program2" class="container mx-auto px-6 scroll-mt-20">
+                 <div class="bg-white p-8 md:p-12 rounded-lg shadow-lg">
+                    <h3 class="text-2xl md:text-3xl font-bold text-custom-green mb-6">フィールドから学ぶアイデア創出研修</h3>
+                    <div class="md:grid md:grid-cols-3 gap-8">
+                        <div class="md:col-span-2">
+                             <img src="https://i.ibb.co/qMMGcQjm/LINE-ALBUM-250405-1.jpg" alt="アイデア創出研修風景" class="rounded-md mb-6 w-full">
+                        </div>
+                        <div class="text-gray-700 leading-relaxed space-y-4">
+                            <h4 class="text-lg font-medium text-custom-green">この体験の価値</h4>
+                            <ul class="list-disc list-inside text-sm space-y-1">
+                                <li>リアルな課題をもとにした「本質的な問い」を立てイノベーティブなアイデアを創出する力が身につく</li>
+                                <li>地域や自然から学ぶ感性を身につけ、自分ごととして向き合うマインドセットを醸成できる</li>
+                                <li>チームでの創発的な対話により、組織内の新しいつながりや発見が生まれる</li>
+                            </ul>
+                        </div>
+                    </div>
+                     <div class="mt-8 border-t border-gray-200 pt-8 grid md:grid-cols-2 gap-8">
+                        <div>
+                            <h4 class="text-xl font-medium text-custom-green mb-4">主な内容</h4>
+                             <p class="text-sm text-gray-600 leading-relaxed">「あたりまえを疑う」ワークショップから始まり、実際のフィールドワーク（地域課題 or 生物生存戦略）を通じて、本質的な課題を発見します。固定観念を外し、「良い問い」を立て、ユニークなアイデアを創出するプロセスを体系的に学びます。</p>
+                        </div>
+                        <div>
+                           <h4 class="text-xl font-medium text-custom-green mb-4">実施概要</h4>
+                           <p class="text-sm mb-4"><strong>参加費:</strong> 1名あたり 16,500円(税込) ※交通費・食事代・懇親会費別途</p>
+                           <p class="text-sm mb-4"><strong>時間:</strong> 1日研修 (10:00〜20:00 懇親会含)</p>
+                           <p class="text-sm mb-4"><strong>場所:</strong> 東京山側エリア (あきる野市、青梅市、八王子市など応相談)</p>
+                           <p class="text-sm mb-4"><strong>持ち物:</strong> 動きやすい服装・靴、筆記用具、雨具など</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- プログラム3詳細 -->
+            <section id="program3" class="container mx-auto px-6 scroll-mt-20">
+                 <div class="bg-white p-8 md:p-12 rounded-lg shadow-lg">
+                    <h3 class="text-2xl md:text-3xl font-bold text-custom-green mb-6">修験道・御岳山 文化研修</h3>
+                     <div class="md:grid md:grid-cols-3 gap-8">
+                        <div class="md:col-span-2">
+                             <img src="https://i.ibb.co/N2RMgmSr/240717-0903.jpg" alt="修験道文化研修風景" class="rounded-md mb-6 w-full">
+                        </div>
+                        <div class="text-gray-700 leading-relaxed space-y-4">
+                            <h4 class="text-lg font-medium text-custom-green">当社ならではの差別化ポイント</h4>
+                             <ul class="list-disc list-inside text-sm space-y-1">
+                                <li>「修験道」という文化的・精神的資源を活用</li>
+                                <li>御岳山の信仰文化と自然や人の営みを融合させた唯一無二の体験</li>
+                             </ul>
+                            <h4 class="text-lg font-medium text-custom-green pt-4">この体験の価値</h4>
+                            <ul class="list-disc list-inside text-sm space-y-1">
+                                <li>日常を離れ、修行体験を通じてストレス耐性や集中力を高める機会</li>
+                                <li>滝行や山中歩行などの身体的な修行を通じて自身の内面と向き合う時間が生まれる</li>
+                                <li>日本古来の自然観・生命観に触れることで、多様な価値観への感受性を養える</li>
+                            </ul>
+                        </div>
+                    </div>
+                     <div class="mt-8 border-t border-gray-200 pt-8 grid md:grid-cols-2 gap-8">
+                        <div>
+                            <h4 class="text-xl font-medium text-custom-green mb-4">主な内容</h4>
+                             <p class="text-sm text-gray-600 leading-relaxed">修験道アイテムを用いて御岳山を歩き、瞑想体験を行います。また、滝行などの身体性の高い修行体験を通じて、禊を行い心身をリセットすることで、自身の思考・感情・身体の変化に気づきを得ます。</p>
+                        </div>
+                        <div>
+                           <h4 class="text-xl font-medium text-custom-green mb-4">実施概要</h4>
+                           <p class="text-sm mb-4"><strong>参加費:</strong> 1名あたり 25,000円(税込)〜 ※交通費・食事代等別途</p>
+                           <p class="text-sm mb-4"><strong>時間:</strong> 日帰り〜1泊2日 (推奨)</p>
+                           <p class="text-sm mb-4"><strong>場所:</strong> 東京都青梅市・御岳山エリア</p>
+                           <p class="text-sm mb-4"><strong>持ち物:</strong> 歩きやすい服装と靴(登山靴推奨)、着替え(滝行用)、バスタオル、雨具、水筒、筆記用具、健康保険証</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+
+        <!-- お問い合わせ -->
+        <section id="contact" class="py-20 bg-custom-green text-white">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl font-bold mb-4 tracking-wider">お問い合わせ・資料請求</h2>
+                <p class="mb-8 max-w-2xl mx-auto">
+                    貴社の課題やご要望に合わせた研修のカスタマイズも可能です。<br>
+                    まずはお気軽に、資料請求またはお問い合わせください。
+                </p>
+                <a href="#" class="bg-custom-gold text-white font-medium py-4 px-12 rounded-lg text-lg hover:bg-custom-accent transition-all duration-300 transform hover:scale-105 shadow-lg">
+                    フォームはこちら
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- フッター -->
+    <footer class="bg-[#2f3e3a] text-white py-8">
+        <div class="container mx-auto px-6 text-center text-sm">
+            <p class="font-medium text-lg mb-4 tracking-wider">株式会社東京山側DMC</p>
+            <div class="flex justify-center space-x-6 mb-4">
+                <a href="#" class="hover:text-custom-accent transition-colors">会社概要</a>
+                <a href="#" class="hover:text-custom-accent transition-colors">プライバシーポリシー</a>
+            </div>
+            <p>&copy; 2024 Tokyo Yamagawa DMC Inc. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
